@@ -36,7 +36,8 @@ We want to make sure your computer is setup properly to handle everything that i
 - QGroundControl
   Start your QGroundControl by opening the application.
   
-  **WSL to Windows***
+  **WSL to Windows**
+  
   If you are running PX4 on WSL, and QGC on Windows, you will need to make sure mavlink is set up to broadcast, as they are technically on different IPs.
   ``` 
   Open PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/px4-rc.mavlink
@@ -54,6 +55,7 @@ We want to make sure your computer is setup properly to handle everything that i
   It should automatically connect to PX4 SITL via UDP (udp://14550)
 
   **MacOS**
+  
   Please contact Andy for help in running QGroundControl on Mac. Everything we do for this plane sucks on Mac. :neutral_face:
 
 ## Running the code
