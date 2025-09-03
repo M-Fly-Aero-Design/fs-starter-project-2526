@@ -38,6 +38,7 @@ We want to make sure your computer is setup properly to handle everything that i
       make px4_sitl gz_standard_vtol
       ```
 - QGroundControl
+  
   Start your QGroundControl by opening the application.
   
   **WSL to Windows**
