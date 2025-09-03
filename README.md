@@ -22,7 +22,7 @@ We want to make sure your computer is setup properly to handle everything that i
       git clone https://github.com/PX4/PX4-Autopilot.git --recursive
       cd PX4-Autopilot
       bash ./Tools/setup/ubuntu.sh   # Install dependencies
-      '''
+      ```
    2. Run SITL
       **Windows**
       ```
