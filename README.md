@@ -68,6 +68,7 @@ We want to make sure your computer is setup properly to handle everything that i
    In ops.py, go ahead and review the code. The code in ops.py essentially uploads our mission (in this case, fly to waypoints) to the Mavlink system. From there, it is communicated to QGroundControl where we can see the simulation. If you have any questions or comments about the code feel free to discuss with the leads.
 
    **TODO**
+   
    In ops.py, find where the waypoints are initialized. Afterwards, change the waypoints to include your home location (not in Ann Arbor) and add 4 more waypoints near you home location. Save the file, and then run the mission.
 
    After your mission is completed, save the mission as a file. Navigate to Plan -> 
