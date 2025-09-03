@@ -9,6 +9,10 @@ Hello to prospective members! Follow this readme to learn more about PX4/QGround
 Before you start this project, please follow the [flight systems setup](https://docs.google.com/document/d/1uoVtI-ufLhJ_x0U6aoHlUNn7B5Cyv6jdNhsmGjJOGJo/edit?usp=sharing).
 We want to make sure your computer is setup properly to handle everything that is needed for our plane! **Again, if there any issues with setup, please let a lead know and we can help!**
 
+## Git Version Control
+
+
+
 ## Setting up the simulation
 
 - PX4 and Gazebo
@@ -58,8 +62,18 @@ We want to make sure your computer is setup properly to handle everything that i
   
   Please contact Andy for help in running QGroundControl on Mac. Everything we do for this plane sucks on Mac. :neutral_face:
 
-## Running the code
+## Running a simulation
 
+   In ops.py, go ahead and review the code. The code in ops.py essentially uploads our mission (in this case, fly to waypoints) to the Mavlink system. From there, it is communicated to QGroundControl where we can see the simulation. If you have any questions or comments about the code feel free to discuss with the leads.
 
+   **TODO**
+   In ops.py, find where the waypoints are initialized. Afterwards, change the waypoints to include your home location (not in Ann Arbor) and add 4 more waypoints near you home location. Save the file, and then run the mission.
+
+   After your mission is completed, save the mission as a file. Navigate to Plan -> 
+   
+
+   
+
+   
 
 
