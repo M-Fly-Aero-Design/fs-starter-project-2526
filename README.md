@@ -29,13 +29,13 @@ We want to make sure your computer is setup properly to handle everything that i
 
 5. Commit your changes
    ```
-   git add ops.py
-   git commit -m "Added waypoints for <your-uniqname>"
+   git add <uniqname>-mission.plan
+   git commit -m "Added mission for <your-uniqname>"
    ```
 
 6. Push your branch
    ```
-   git push origin <your-uniqname>
+   git push --set-upstream origin <your-uniqname>
    ```
 
 7. Create a Pull Request (PR)
@@ -98,13 +98,32 @@ We want to make sure your computer is setup properly to handle everything that i
    In ops.py, go ahead and review the code. The code in ops.py essentially uploads our mission (in this case, fly to waypoints) to the Mavlink system. From there, it is communicated to QGroundControl where we can see the simulation. If you have any questions or comments about the code feel free to discuss with the leads.
 
    **TODO**
+
+   Before starting PX4 (SITL), make sure to set your home location first. This can be done by:
+   ```
+   export PX4_HOME_LAT=<home-lat>
+   export PX4_HOME_LON=-<home-lon>
+   export PX4_HOME_ALT=10
+   ```
+
+   Now run PX4 with the make command earlier. Don't worry about the Gazebo that pops up for now, but that is the plane we are simulating.
    
-   In ops.py, find where the waypoints are initialized. Afterwards, change the waypoints to include your home location (not in Ann Arbor) and add 4 more waypoints near you home location. Save the file, and then run the mission by running the ops.py file.
+   In ops.py, find where the waypoints are initialized. Afterwards, change the waypoints to include your home location (not in Ann Arbor) and add 4 more waypoints near you home location. Save the file, and then upload the mission by running the ops.py file.
    ```
    python ops.py
    ```
-   
-   After your mission is completed, save the mission as a file. Navigate to Plan -> 
+
+   Now in the PX4 terminal, start the takeoff by doing:
+   ```
+   commander arm throttle
+   commander takeoff
+   ```
+
+   In QGroundControl, click on the plan icon in the left toolbar. Go to file, and then click download. Your waypoints you chose should be now shown. 
+
+   Next, click on where it says "Hold" on the top. Change it to mission, and now you should see a simulation of waypoints that your plane is moving to!
+
+   After your mission is completed, save the mission as a file. Navigate to Plan -> File -> Save as. Save the mission as your <uniqname>-mission. 
    
 
    
