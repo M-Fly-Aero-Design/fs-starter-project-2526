@@ -40,8 +40,18 @@ We want to make sure your computer is setup properly to handle everything that i
 
 7. Create a Pull Request (PR)
 
-   Go to the GitHub repository in your browser. You should see a prompt to create a PR for your new branch. Title your PR: "Waypoints - <your-uniqname>" 
-   and submit your PR for review.
+   Navigate to the repository, where you should see a "Compare & pull request" button. Click it.
+
+   ![alt text](image.png)
+
+   Add a title and description. In your description, include the following information:
+
+   - Name, grade, major
+   - What you hope to work on in MFly
+   - Favorite artist you listen to (any Drake enjoyers??)
+   - Whatever else you want. it's your PR bro
+
+   Click "Create pull request". Then, go to the top right (ish) of the screen and click "Reviewers", then search for my username (andypan). Add me as a reviewer. Also ping me on slack because I don't trust GitHub notifications.
 
 ## Setting up the simulation
 
