@@ -99,8 +99,11 @@ We want to make sure your computer is setup properly to handle everything that i
 
    **TODO**
    
-   In ops.py, find where the waypoints are initialized. Afterwards, change the waypoints to include your home location (not in Ann Arbor) and add 4 more waypoints near you home location. Save the file, and then run the mission.
-
+   In ops.py, find where the waypoints are initialized. Afterwards, change the waypoints to include your home location (not in Ann Arbor) and add 4 more waypoints near you home location. Save the file, and then run the mission by running the ops.py file.
+   ```
+   python ops.py
+   ```
+   
    After your mission is completed, save the mission as a file. Navigate to Plan -> 
    
 
