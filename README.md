@@ -49,7 +49,7 @@ We want to make sure your computer is setup properly to handle everything that i
    - Favorite artist you listen to (any Drake enjoyers??)
    - Whatever else you want. it's your PR bro
 
-   Click "Create pull request". Then, go to the top right (ish) of the screen and click "Reviewers", then search for my username (andypan). Add me as a reviewer. Also ping me on slack because I don't trust GitHub notifications.
+   Click "Create pull request". Then, go to the top right (ish) of the screen and click "Reviewers", then search for my username (andypan) or (bgardiner1). Add me as a reviewer. Also ping me on slack because I don't trust GitHub notifications.
 
 ## Setting up the simulation
 
