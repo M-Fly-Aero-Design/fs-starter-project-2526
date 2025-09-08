@@ -2,15 +2,36 @@ from pymavlink import mavutil
 
 def connect(connection_string='udp:127.0.0.1:14540'):
     """
-    Connect to the MAVLink system.
+    Connect to the MAVLink system and wait for PX4 (sysid=1, compid=1) heartbeat.
     """
     try:
-        master = mavutil.mavlink_connection(connection_string)
-        master.wait_heartbeat()
-        print("Heartbeat from system (system %u component %u)" % (master.target_system, master.target_component))
+        master = mavutil.mavlink_connection(
+            connection_string,
+            source_system=255,      # GCS sysid
+            source_component=190    # GCS compid
+        )
+
+        # Wait for heartbeat specifically from PX4 (sysid=1, compid=1)
+        print("Waiting for PX4 heartbeat (sysid=1, compid=1)...")
+        hb = None
+        while hb is None:
+            hb = master.recv_match(
+                type='HEARTBEAT',
+                blocking=True,
+                timeout=5
+            )
+            if hb and hb.get_srcSystem() == 1 and hb.get_srcComponent() == 1:
+                break
+            hb = None  # ignore other heartbeats
+
+        master.target_system = 1
+        master.target_component = 1
+        print(f"Got PX4 heartbeat from system {master.target_system}, component {master.target_component}")
         return master
+
     except Exception as e:
         print(f"Failed to connect: {e}")
+        return None
 
 master = connect()
 
@@ -68,10 +89,18 @@ def set_mode(master, mode):
 
 # set_mode(master, "RTL")
 from pymavlink.dialects.v20 import common as mavlink2
-def upload_mission(master, waypoints=[(47.397742, 8.545594, 10), (47.397872, 8.546050, 10)]):
+def upload_mission(master):
     """
     waypoints: (lat [deg], lon [deg], alt [m])
     """
+    waypoints = [
+	    (40.712776, -74.005974, 10),  # Home: Lower Manhattan
+	    (40.706192, -74.009160, 10),  # Wall Street area
+	    (40.711601, -74.013120, 10),  # World Trade Center
+	    (40.715337, -73.998024, 10),  # Chinatown/Little Italy
+	    (40.730824, -73.997330, 10)   # Washington Square Park
+    ]
+
     # Example mission: 2 waypoints
     mission_items = [
         {
@@ -93,13 +122,14 @@ def upload_mission(master, waypoints=[(47.397742, 8.545594, 10), (47.397872, 8.5
     master.mav.mission_count_send(master.target_system, master.target_component, len(mission_items))
 
     # Step 3: Handle MISSION_REQUEST_INT and send each MISSION_ITEM_INT
+    i = -1
     for _ in mission_items:
-        msg = master.recv_match(type='MISSION_REQUEST_INT', blocking=True, timeout=5)
-        if msg is None:
-            print("Timeout waiting for MISSION_REQUEST_INT")
-            break
+        # msg = master.recv_match(type='MISSION_REQUEST_INT', blocking=True, timeout=5)
+        # if msg is None:
+        #     print("Timeout waiting for MISSION_REQUEST_INT")
+        #     break
 
-        i = msg.seq
+        i += 1
         item = mission_items[i]
 
         master.mav.mission_item_int_send(
