@@ -23,21 +23,22 @@ We want to make sure your computer is setup properly to handle everything that i
    git checkout -b <your-uniqname>
    ```
 
-3. Make your changes (By following the TODO below this readme.)
+3. Make your changes (By following the TODO below this README.)
+4. 
    Complete the TODO in ops.py by adding your home location and 4 nearby waypoints.
 
-4. Commit your changes
+5. Commit your changes
    ```
    git add ops.py
    git commit -m "Added waypoints for <your-uniqname>"
    ```
 
-5. Push your branch
+6. Push your branch
    ```
    git push origin <your-uniqname>
    ```
 
-6. Create a Pull Request (PR)
+7. Create a Pull Request (PR)
 
    Go to the GitHub repository in your browser. You should see a prompt to create a PR for your new branch. Title your PR: "Waypoints - <your-uniqname>" 
    and submit your PR for review.
