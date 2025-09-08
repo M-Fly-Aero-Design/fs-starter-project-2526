@@ -24,7 +24,7 @@ We want to make sure your computer is setup properly to handle everything that i
    ```
 
 3. Make your changes (By following the TODO below this README.)
-4. 
+
    Complete the TODO in ops.py by adding your home location and 4 nearby waypoints.
 
 5. Commit your changes
