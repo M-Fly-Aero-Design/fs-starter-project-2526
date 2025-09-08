@@ -11,7 +11,36 @@ We want to make sure your computer is setup properly to handle everything that i
 
 ## Git Version Control
 
+1. Clone the repository
+   ```
+   git clone https://github.com/M-Fly-Aero-Design/fs-starter-project-2526.git
+   cd flight-systems-starter
+   ```
 
+2. Create your own branch
+   Name your branch after your uniqname.
+   ```
+   git checkout -b <your-uniqname>
+   ```
+
+3. Make your changes (By following the TODO below this readme.)
+   Complete the TODO in ops.py by adding your home location and 4 nearby waypoints.
+
+4. Commit your changes
+   ```
+   git add ops.py
+   git commit -m "Added waypoints for <your-uniqname>"
+   ```
+
+5. Push your branch
+   ```
+   git push origin <your-uniqname>
+   ```
+
+6. Create a Pull Request (PR)
+
+   Go to the GitHub repository in your browser. You should see a prompt to create a PR for your new branch. Title your PR: "Waypoints - <your-uniqname>" 
+   and submit your PR for review.
 
 ## Setting up the simulation
 
