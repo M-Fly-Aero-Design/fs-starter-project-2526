@@ -42,8 +42,6 @@ We want to make sure your computer is setup properly to handle everything that i
 
    Navigate to the repository, where you should see a "Compare & pull request" button. Click it.
 
-   ![alt text](image.png)
-
    Add a title and description. In your description, include the following information:
 
    - Name, grade, major
