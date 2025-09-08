@@ -123,7 +123,7 @@ We want to make sure your computer is setup properly to handle everything that i
 
    Next, click on where it says "Hold" on the top. Change it to mission, and now you should see a simulation of waypoints that your plane is moving to!
 
-   After your mission is completed, save the mission as a file. Navigate to Plan -> File -> Save as. Save the mission as <uniqname>-mission. 
+   After your mission is completed, save the mission as a file. Navigate to Plan -> File -> Save as. Save the mission as "uniqname"-mission. 
    
 
    
