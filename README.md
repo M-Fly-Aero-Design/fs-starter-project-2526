@@ -103,6 +103,7 @@ We want to make sure your computer is setup properly to handle everything that i
   Please contact Andy for help in running QGroundControl on Mac. Everything we do for this plane sucks on Mac. :neutral_face:
 
 ## Running a simulation
+   Open another terminal and navigate to where you clone this repository. 
 
    In ops.py, go ahead and review the code. The code in ops.py essentially uploads our mission (in this case, fly to waypoints) to the Mavlink system. From there, it is communicated to QGroundControl where we can see the simulation. If you have any questions or comments about the code feel free to discuss with the leads.
 
