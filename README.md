@@ -62,6 +62,7 @@ We want to make sure your computer is setup properly to handle everything that i
       bash ./Tools/setup/ubuntu.sh   # Install dependencies
       ```
    2. Run SITL
+      
       **Windows**
       ```
       sudo apt remove gz-harmonic
