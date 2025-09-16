@@ -83,9 +83,9 @@ We want to make sure your computer is setup properly to handle everything that i
   **WSL to Windows**
   
   If you are running PX4 on WSL, and QGC on Windows, you will need to make sure mavlink is set up to broadcast, as they are technically on different IPs.
-  ``` 
-  Open PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/px4-rc.mavlink
-  ```
+  Open
+  PX4-Autopilot/ROMFS/px4fmu_common/init.d-posix/px4-rc.mavlink
+  
   Scroll a little, you should see
   ```
   # GCS link
